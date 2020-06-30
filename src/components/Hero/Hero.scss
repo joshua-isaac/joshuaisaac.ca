@@ -1,6 +1,9 @@
 .hero {
   height: 850px;
   position: relative;
+  @media (max-width: 575px) {
+    height: 83vh;
+  }
   .overlay {
     position: absolute;
     width: 100%;
