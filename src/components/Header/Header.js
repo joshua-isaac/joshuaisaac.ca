@@ -120,7 +120,7 @@ const Header = () => {
               },
             },
             open: {
-              top: "51px",
+              top: "48px",
               height: "100vh",
               transition: {
                 delay: 0.2,
