@@ -92,7 +92,7 @@ export const About = () => {
   const data = useStaticQuery(ABOUT_QUERY)
   const AboutImg = data.file.childImageSharp.fluid
   var settings = {
-    speed: 3000,
+    speed: 2000,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
