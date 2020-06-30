@@ -36,7 +36,7 @@ const Header = () => {
     window.addEventListener("scroll", function (event) {
       var scroll = this.scrollY
       const header = document.getElementById("header")
-      if (scroll >= 50) {
+      if (scroll >= 100) {
         header.classList.add("sticky")
       } else {
         header.classList.remove("sticky")
