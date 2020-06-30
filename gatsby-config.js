@@ -21,13 +21,13 @@ module.exports = {
       },
     },
     // posts
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `posts`,
-    //     path: `${__dirname}/src/content/posts/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/content/posts/`,
+      },
+    },
     // projects
     {
       resolve: `gatsby-source-filesystem`,
