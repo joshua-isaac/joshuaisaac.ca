@@ -4,7 +4,6 @@ import { FaTwitter, FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 const Footer = () => {
   const data = useStaticQuery(FOOTER_QUERY)
-  console.log(data.site.siteMetadata.github)
   return (
     <footer>
       <ul>

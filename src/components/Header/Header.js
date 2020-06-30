@@ -1,6 +1,7 @@
 import React from "react"
 import { motion, useCycle } from "framer-motion"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { FaTwitter, FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 const Header = () => {
   const data = useStaticQuery(HEADER_QUERY)
@@ -152,8 +153,13 @@ const Header = () => {
                 </Link>
               </motion.li>
             ))}
-            <motion.li>
-              <ul>
+            <motion.li
+              variants={{
+                closed: { y: 50, opacity: 0 },
+                open: { y: 0, opacity: 1, transition: { delay: 0.8 } },
+              }}
+            >
+              <ul className="socials">
                 <li>
                   <a href={data.site.siteMetadata.github} aria-label="Github">
                     <FaGithub />

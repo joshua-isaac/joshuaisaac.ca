@@ -5,7 +5,12 @@ const LetsWorkTogether = () => {
   return (
     <div className="lets-work-together">
       <div className="small-wrapper">
-        <h3>Let's Work Together 🤝</h3>
+        <h3>
+          Let's Work Together{" "}
+          <span role="img" aria-label="Handshake Emoji">
+            🤝
+          </span>
+        </h3>
         <p>
           The key to growing your brand or business starts with it’s online
           presence. Let’s bring it to life with a fast, modern and responsive

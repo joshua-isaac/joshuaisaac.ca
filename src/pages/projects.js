@@ -24,7 +24,7 @@ const Projects = () => {
                       <a
                         href={project.node.frontmatter.link}
                         target="_blank"
-                        rel="noreferrrer"
+                        rel="noreferrer"
                       >
                         <h4>{project.node.frontmatter.title}</h4>
                       </a>
@@ -34,7 +34,7 @@ const Projects = () => {
                         <a
                           href={project.node.frontmatter.link}
                           target="_blank"
-                          rel="noreferrrer"
+                          rel="noreferrer"
                         >
                           View Site
                         </a>
@@ -46,7 +46,7 @@ const Projects = () => {
                       <a
                         href={project.node.frontmatter.link}
                         target="_blank"
-                        rel="noreferrrer"
+                        rel="noreferrer"
                       >
                         <Img
                           fluid={
