@@ -2,6 +2,9 @@
   margin-bottom: 60px;
   h3 {
     font-weight: 600;
+    @media (max-width: 575px) {
+      font-size: 24px;
+    }
   }
   .testimonial {
     background-color: $white;
