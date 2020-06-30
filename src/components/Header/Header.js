@@ -1,8 +1,9 @@
 import React from "react"
 import { motion, useCycle } from "framer-motion"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 const Header = () => {
+  const data = useStaticQuery(HEADER_QUERY)
   const [open, setOpen] = useCycle(false, true)
   // set up menu
   const menu = [
@@ -17,10 +18,6 @@ const Header = () => {
     {
       path: "/projects",
       title: "Projects",
-    },
-    {
-      path: "/services",
-      title: "Services",
     },
     {
       path: "/contact",
@@ -155,6 +152,36 @@ const Header = () => {
                 </Link>
               </motion.li>
             ))}
+            <motion.li>
+              <ul>
+                <li>
+                  <a href={data.site.siteMetadata.github} aria-label="Github">
+                    <FaGithub />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={data.site.siteMetadata.linkedin}
+                    aria-label="Linkedin"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li>
+                  <a href={data.site.siteMetadata.twitter} aria-label="Twitter">
+                    <FaTwitter />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={data.site.siteMetadata.instagram}
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+                </li>
+              </ul>
+            </motion.li>
           </motion.ul>
         </motion.nav>
       </motion.header>
@@ -163,3 +190,16 @@ const Header = () => {
 }
 
 export default Header
+
+const HEADER_QUERY = graphql`
+  query {
+    site {
+      siteMetadata {
+        github
+        instagram
+        linkedin
+        twitter
+      }
+    }
+  }
+`
