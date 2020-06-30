@@ -45,6 +45,9 @@ nav {
     flex-direction: column;
     position: relative;
     top: -40px;
+    @media (max-width: 575px) {
+      top: -60px;
+    }
     li {
       margin: 12px 0;
       a {
