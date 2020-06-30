@@ -1,0 +1,29 @@
+footer {
+  padding: 15px;
+  background-color: $black;
+  text-align: center;
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    li {
+      margin: 0 8px;
+      a {
+        color: $white;
+        transition: 0.3s ease;
+        &:hover {
+          color: $red;
+        }
+        svg {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .copyright {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    color: $white;
+  }
+}

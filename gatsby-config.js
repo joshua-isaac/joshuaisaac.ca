@@ -5,7 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    twitter: "https://www.twitter.com",
+    instagram: "https://www.instagram.com",
+    github: "https://www.github.com",
+    linkedin: "https://www.linkedin.com",
+  },
   plugins: [
     // pages
     {

@@ -1,0 +1,39 @@
+.testimonials-container {
+  margin-bottom: 60px;
+  h3 {
+    font-weight: 600;
+  }
+  .testimonial {
+    background-color: $white;
+    padding: 25px 25px 40px 25px;
+    @media (max-width: 575px) {
+    }
+    p {
+      font-style: italic;
+      padding: 15px 0;
+    }
+    .name {
+      text-align: center;
+      display: block;
+      font-weight: 600;
+      a {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+    .slick-dots {
+      .slick-active {
+        button::before {
+          color: $red;
+          opacity: 1;
+        }
+      }
+      li {
+        button::before {
+          color: $black;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,11 @@
 import React from "react"
-import "../styles/global.scss"
+import Layout from "../components/Layout"
+import Hero from "../components/Hero/Hero"
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  )
 }
