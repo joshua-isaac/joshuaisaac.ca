@@ -78,7 +78,9 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
                   }
                 : []
             )}
-          />
+          >
+            <html lang="en" />
+          </Helmet>
         )
       }}
     ></StaticQuery>
