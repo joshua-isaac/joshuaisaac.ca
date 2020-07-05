@@ -73,6 +73,11 @@ module.exports = {
             },
           },
         ],
+        remarkPlugins: [
+          // Add target _blank to external links and defines an appropriate
+          // link type of 'nofollow noopener noreferrer'
+          require("remark-external-links"),
+        ],
       },
     },
     // SASS
@@ -89,5 +94,6 @@ module.exports = {
         display: `standalone`,
       },
     },
+    "gatsby-plugin-offline",
   ],
 }

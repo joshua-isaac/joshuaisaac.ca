@@ -6,13 +6,12 @@
   .date {
     font-size: 14px;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     font-weight: 400;
   }
   h1 {
     font-weight: 600;
     position: relative;
-    margin-bottom: 25px;
     @media (max-width: 575px) {
       font-size: 1.75rem;
     }
