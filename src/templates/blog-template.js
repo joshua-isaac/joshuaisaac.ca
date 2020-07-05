@@ -1,6 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   query($slug: String!) {
@@ -15,7 +18,7 @@ export const query = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 1024, quality: 90) {
-              src
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -25,16 +28,20 @@ export const query = graphql`
 `
 
 const BlogPostTemplate = ({ data }) => {
-  console.log(data)
   return (
-    <Layout>
-      <section className="single-blog-container">
-        <div className="small-wrapper">
-          <span className="date">Posted on: {data.mdx.frontmatter.date}</span>
-          <h1>{data.mdx.frontmatter.title}</h1>
-        </div>
-      </section>
-    </Layout>
+    <>
+      <SEO title={data.mdx.frontmatter.title} description={`yto`} />
+      <Layout>
+        <section className="single-blog-container">
+          <div className="small-wrapper">
+            <span className="date">{data.mdx.frontmatter.date}</span>
+            {/* <Img fluid={data.mdx.frontmatter.image.childImageSharp.fluid} /> */}
+            <h1>{data.mdx.frontmatter.title}</h1>
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </div>
+        </section>
+      </Layout>
+    </>
   )
 }
 

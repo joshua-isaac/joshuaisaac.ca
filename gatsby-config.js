@@ -6,6 +6,11 @@
 
 module.exports = {
   siteMetadata: {
+    title: "Joshua Isaac",
+    description: "Freelance Web Developer in Toronto",
+    url: "https://www.joshuaisaac.ca",
+    image: "",
+    author: "Joshua Isaac",
     twitter: "https://www.twitter.com",
     instagram: "https://www.instagram.com",
     github: "https://www.github.com",
@@ -64,7 +69,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 900,
             },
           },
         ],

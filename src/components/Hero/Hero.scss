@@ -28,18 +28,10 @@
       .tagline {
         color: #eee;
         font-size: 26px;
-        font-weight: 500;
+        font-weight: 400;
         margin: 20px 0;
         @media (max-width: 575px) {
           font-size: 20px;
-        }
-        span {
-          .red {
-            font-style: italic;
-            background-color: $red;
-            padding: 2px;
-            font-weight: 500;
-          }
         }
       }
       .actions {
@@ -59,8 +51,6 @@
             font-size: 20px;
             font-weight: 600;
             &:hover {
-              border: 2px solid $red;
-              background-color: transparent;
               text-decoration: none;
             }
           }
@@ -75,8 +65,6 @@
             font-size: 20px;
             font-weight: 600;
             &:hover {
-              border: 2px solid #eee;
-              background-color: transparent;
               text-decoration: none;
             }
           }
@@ -85,92 +73,3 @@
     }
   }
 }
-
-// .hero {
-//   text-align: center;
-//   height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   position: relative;
-//   .small-wrapper {
-//     @media (max-width: 575px) {
-//       width: 100%;
-//     }
-//   }
-//   h1 {
-//     margin-bottom: 10px;
-//     font-weight: 600;
-//     @media (max-width: 575px) {
-//       font-size: 30px;
-//     }
-//     span {
-//       font-size: 34px;
-//     }
-//   }
-//   span {
-//     font-size: 24px;
-//     @media (max-width: 575px) {
-//       font-size: 20px;
-//     }
-//     .Typist {
-//       .red {
-//         color: $red;
-//         font-style: italic;
-//         text-decoration: underline;
-//       }
-//     }
-//   }
-//   .actions {
-//     display: flex;
-//     justify-content: space-between;
-//     margin-top: 40px;
-//     .contact-btn {
-//       a {
-//         background-color: $red;
-//         color: $white;
-//         padding: 8px 20px;
-//         font-weight: 500;
-//         transition: 0.3s ease;
-//         border: 2px solid transparent;
-//         &:hover {
-//           border: 2px solid $red;
-//           color: $red;
-//           background-color: $white;
-//           text-decoration: none;
-//         }
-//       }
-//     }
-//     .about-btn {
-//       a {
-//         background-color: $black;
-//         color: $white;
-//         padding: 8px 20px;
-//         font-weight: 500;
-//         transition: 0.3s ease;
-//         border: 2px solid transparent;
-//         &:hover {
-//           border: 2px solid $black;
-//           color: $black;
-//           background-color: $white;
-//           text-decoration: none;
-//         }
-//       }
-//     }
-//     @media (max-width: 575px) {
-//       display: unset;
-//       .contact-btn,
-//       .about-btn {
-//         a {
-//           display: block;
-//           width: 100%;
-//         }
-//       }
-//       .contact-btn {
-//         margin-top: 30px;
-//       }
-//       .about-btn {
-//         margin-top: 15px;
-//       }
-//     }
-//   }
-// }

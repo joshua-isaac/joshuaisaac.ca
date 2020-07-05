@@ -47,16 +47,11 @@
         .link {
           margin-top: 25px;
           a {
-            background-color: $red;
+            background-color: $black;
             color: $white;
             padding: 8px 30px;
             transition: 0.3s ease;
-            border: 2px solid $red;
             font-weight: 600;
-            &:hover {
-              background-color: transparent;
-              color: $red;
-            }
           }
           @media (max-width: 991px) {
             margin-bottom: 25px;

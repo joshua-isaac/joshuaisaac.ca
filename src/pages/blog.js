@@ -1,31 +1,35 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import SEO from "../components/SEO"
 
 const Blog = () => {
   const data = useStaticQuery(BLOG_QUERY)
   console.log(data)
   const posts = data.allMdx.edges
   return (
-    <Layout>
-      <section className="blogs-container">
-        <div className="small-wrapper">
-          <h1>Blog Posts</h1>
-          <div className="posts-list">
-            {posts.map((post, i) => (
-              <article>
-                <span className="date">
-                  Posted on: {post.node.frontmatter.date}
-                </span>
-                <Link to={`/blog/${post.node.frontmatter.slug}`}>
-                  <h3>{post.node.frontmatter.title}</h3>
-                </Link>
-              </article>
-            ))}
+    <>
+      <SEO title={`Blog`} />
+      <Layout>
+        <section className="blogs-container">
+          <div className="small-wrapper">
+            <h1>Blog Posts</h1>
+            <div className="posts-list">
+              {posts.map((post, i) => (
+                <article key={i}>
+                  <span className="date">
+                    Posted on: {post.node.frontmatter.date}
+                  </span>
+                  <Link to={`/blog/${post.node.frontmatter.slug}`}>
+                    <h3>{post.node.frontmatter.title}</h3>
+                  </Link>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </Layout>
+        </section>
+      </Layout>
+    </>
   )
 }
 

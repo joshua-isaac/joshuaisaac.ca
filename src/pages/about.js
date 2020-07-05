@@ -8,6 +8,7 @@ import LetsWorkTogether from "../components/LetsWorkTogether/LetsWorkTogether"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import SEO from "../components/SEO"
 
 import HTML from "../images/HTML.svg"
 import SCSS from "../images/SCSS.svg"
@@ -103,114 +104,118 @@ export const About = () => {
     dots: false,
   }
   return (
-    <Layout>
-      <section className="about-container">
-        <div className="small-wrapper">
-          <h1>About Me</h1>
-          <Row>
-            <Col lg={6}>
-              <div className="about-content">
-                <p>
-                  Hey there I'm Joshua, a frontend web developer experienced in
-                  creating bespoke WordPress & Shopify themes. With my extensive
-                  knowledge of HTML5, CSS3, SCSS, JavaScript, jQuery, PHP and my
-                  growing interest in modern tools and frameworks such as React
-                  & Gatsby, I’m passionate about building fast, modern and
-                  responsive websites with remarkable user experience.
-                </p>
-                <p>
-                  I'm always looking for freelance work and would love to bring
-                  any projects you may have to life, so feel free to{" "}
-                  <Link to="/contact">contact</Link> me, or{" "}
-                  <a href={Resume} download>
-                    download
-                  </a>{" "}
-                  my resume if you wanna hire me, thats cool too. 😃
-                </p>
-                <p>
-                  You can check out some of my work{" "}
-                  <Link to="/projects">here</Link>.
-                </p>
-                <p>Aside from web development I enjoy:</p>
-                <ul>
-                  <li>
-                    <span role="img" aria-label="Pants Emoji">
-                      👖
-                    </span>{" "}
-                    Thrift Shoppin’
-                  </li>
-                  <li>
-                    <span role="img" aria-label="Film Emoji">
-                      🎞
-                    </span>{" "}
-                    Film Photography
-                  </li>
-                  <li>
-                    <span role="img" aria-label="Music Emoji">
-                      🎵
-                    </span>{" "}
-                    House Music
-                  </li>
-                  <li>
-                    <span role="img" aria-label="Tacos Emoji">
-                      🌮
-                    </span>{" "}
-                    Tacos... Mmhm
-                  </li>
-                  <li>
-                    <span role="img" aria-label="Travel Emoji">
-                      ✈️
-                    </span>{" "}
-                    Travelling with my bad ass{" "}
+    <>
+      <SEO title={`About`} />
+      <Layout>
+        <section className="about-container">
+          <div className="small-wrapper">
+            <h1>About Me</h1>
+            <Row>
+              <Col lg={6}>
+                <div className="about-content">
+                  <p>
+                    Hey there I'm Joshua, a frontend web developer experienced
+                    in creating bespoke WordPress & Shopify themes. With my
+                    extensive knowledge of HTML5, CSS3, SCSS, JavaScript,
+                    jQuery, PHP and my growing interest in modern tools and
+                    frameworks such as React & Gatsby, I’m passionate about
+                    building fast, modern and responsive websites with
+                    remarkable user experience.
+                  </p>
+                  <p>
+                    I'm always looking for freelance work and would love to
+                    bring any projects you may have to life, so feel free to{" "}
+                    <Link to="/contact">contact</Link> me, or{" "}
+                    <a href={Resume} download>
+                      download
+                    </a>{" "}
+                    my resume if you wanna hire me, thats cool too. 😃
+                  </p>
+                  <p>
+                    You can check out some of my work{" "}
+                    <Link to="/projects">here</Link>.
+                  </p>
+                  <p>Aside from web development I enjoy:</p>
+                  <ul>
+                    <li>
+                      <span role="img" aria-label="Pants Emoji">
+                        👖
+                      </span>{" "}
+                      Thrift Shoppin’
+                    </li>
+                    <li>
+                      <span role="img" aria-label="Film Emoji">
+                        🎞
+                      </span>{" "}
+                      Film Photography
+                    </li>
+                    <li>
+                      <span role="img" aria-label="Music Emoji">
+                        🎵
+                      </span>{" "}
+                      House Music
+                    </li>
+                    <li>
+                      <span role="img" aria-label="Tacos Emoji">
+                        🌮
+                      </span>{" "}
+                      Tacos... Mmhm
+                    </li>
+                    <li>
+                      <span role="img" aria-label="Travel Emoji">
+                        ✈️
+                      </span>{" "}
+                      Travelling with my bad ass{" "}
+                      <a
+                        href="https://www.instagram.com/sibelrafailov"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        girlfriend
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </Col>
+              <Col lg={6}>
+                <div className="about-img">
+                  <BackgroundImage
+                    fluid={AboutImg}
+                    className={`img`}
+                  ></BackgroundImage>
+                  <p className="photo-credit">
+                    Photo Credit:
                     <a
-                      href="https://www.instagram.com/sibelrafailov"
+                      href="https://www.instagram.com/cascadasto"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      girlfriend
+                      @cascadasto
                     </a>
-                  </li>
-                </ul>
-              </div>
-            </Col>
-            <Col lg={6}>
-              <div className="about-img">
-                <BackgroundImage
-                  fluid={AboutImg}
-                  className={`img`}
-                ></BackgroundImage>
-                <p className="photo-credit">
-                  Photo Credit:
-                  <a
-                    href="https://www.instagram.com/cascadasto"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    @cascadasto
-                  </a>
-                </p>
-              </div>
-            </Col>
-          </Row>
-          <div className="tools-slider">
-            <h3>
-              <span role="img" aria-label="Tools Emoji">
-                🛠
-              </span>{" "}
-              Tools & Tech
-            </h3>
-            <Slider {...settings}>
-              {tools.map((tool, i) => (
-                <div className="slide">
-                  <img src={tool.src} alt={`${tool.name} Icon`} />
+                  </p>
                 </div>
-              ))}
-            </Slider>
+              </Col>
+            </Row>
+            <div className="tools-slider">
+              <h3>
+                <span role="img" aria-label="Tools Emoji">
+                  🛠
+                </span>{" "}
+                Tools & Tech
+              </h3>
+              <Slider {...settings}>
+                {tools.map((tool, i) => (
+                  <div className="slide">
+                    <img src={tool.src} alt={`${tool.name} Icon`} />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
-        </div>
-      </section>
-      <LetsWorkTogether />
-    </Layout>
+        </section>
+        <LetsWorkTogether />
+      </Layout>
+    </>
   )
 }
 

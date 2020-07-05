@@ -34,16 +34,20 @@ const Header = () => {
     window.addEventListener("scroll", function (event) {
       var scroll = this.scrollY
       const header = document.getElementById("header")
+      const headerBtn = document.getElementsByClassName("header-btn")
       if (scroll >= 100) {
         header.classList.add("sticky")
+        header.classList.add("rm-padding")
       } else {
         header.classList.remove("sticky")
+        header.classList.remove("rm-padding")
       }
     })
   return (
     <>
       <motion.header animate={open ? "open" : "closed"} id="header">
         <motion.button
+          className="header-btn"
           onClick={() => {
             setOpen()
             document.querySelector("body").classList.toggle("fixed")

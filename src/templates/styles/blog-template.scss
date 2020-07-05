@@ -13,14 +13,27 @@
     font-weight: 600;
     position: relative;
     margin-bottom: 25px;
-    &:after {
-      content: "";
-      position: absolute;
-      width: 80px;
-      height: 3px;
-      left: 0;
-      bottom: -5px;
-      background-color: $red;
+    @media (max-width: 575px) {
+      font-size: 1.75rem;
+    }
+  }
+  pre {
+    padding: 15px;
+  }
+  p {
+    a {
+      color: $red;
+      border-bottom: 2px solid $red;
+      text-decoration: none;
+    }
+  }
+  blockquote {
+    font-style: italic;
+  }
+  ul {
+    margin-left: 40px;
+    li {
+      list-style: outside;
     }
   }
 }

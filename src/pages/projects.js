@@ -5,66 +5,70 @@ import { Row, Col } from "react-bootstrap"
 import Img from "gatsby-image"
 import LetsWorkTogether from "../components/LetsWorkTogether/LetsWorkTogether"
 import Testimonials from "../components/Testimonials/Testimonials"
+import SEO from "../components/SEO"
 
 const Projects = () => {
   const data = useStaticQuery(PROJECTS_QUERY)
-  console.log(data)
   const projects = data.allMdx.edges
   return (
-    <Layout>
-      <section className="projects-container">
-        <div className="small-wrapper">
-          <h1>Projects</h1>
-          <div className="projects-list">
-            {projects.map((project, i) => (
-              <div class="project">
-                <Row>
-                  <Col lg={6}>
-                    <div className="project-content">
-                      <a
-                        href={project.node.frontmatter.link}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <h4>{project.node.frontmatter.title}</h4>
-                      </a>
-                      <span>{project.node.frontmatter.tools}</span>
-                      <p>{project.node.frontmatter.description}</p>
-                      <div className="link">
+    <>
+      <SEO title={`Projects`} />
+      <Layout>
+        <section className="projects-container">
+          <div className="small-wrapper">
+            <h1>Projects</h1>
+            <div className="projects-list">
+              {projects.map((project, i) => (
+                <div className="project" key={i}>
+                  <Row>
+                    <Col lg={6}>
+                      <div className="project-content">
                         <a
                           href={project.node.frontmatter.link}
                           target="_blank"
                           rel="noreferrer"
                         >
-                          View Site
+                          <h4>{project.node.frontmatter.title}</h4>
+                        </a>
+                        <span>{project.node.frontmatter.tools}</span>
+                        <p>{project.node.frontmatter.description}</p>
+                        <div className="link">
+                          <a
+                            href={project.node.frontmatter.link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            View Site
+                          </a>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col lg={6}>
+                      <div className="project-img">
+                        <a
+                          href={project.node.frontmatter.link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Img
+                            fluid={
+                              project.node.frontmatter.image.childImageSharp
+                                .fluid
+                            }
+                          />
                         </a>
                       </div>
-                    </div>
-                  </Col>
-                  <Col lg={6}>
-                    <div className="project-img">
-                      <a
-                        href={project.node.frontmatter.link}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Img
-                          fluid={
-                            project.node.frontmatter.image.childImageSharp.fluid
-                          }
-                        />
-                      </a>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            ))}
+                    </Col>
+                  </Row>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      <Testimonials />
-      <LetsWorkTogether />
-    </Layout>
+        </section>
+        <Testimonials />
+        <LetsWorkTogether />
+      </Layout>
+    </>
   )
 }
 
