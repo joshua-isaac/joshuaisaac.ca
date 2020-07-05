@@ -77,5 +77,17 @@ module.exports = {
     },
     // SASS
     `gatsby-plugin-sass`,
+    // PWA Support
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Joshua Isaac`,
+        short_name: `Joshua Isaac`,
+        start_url: `/`,
+        background_color: `#FFF`,
+        theme_color: `#e7301c`,
+        display: `standalone`,
+      },
+    },
   ],
 }
