@@ -105,7 +105,7 @@ export const About = () => {
   }
   return (
     <>
-      <SEO title={`About`} />
+      <SEO title={`About | Joshua Isaac Freelance Web Developer in Toronto`} />
       <Layout>
         <section className="about-container">
           <div className="small-wrapper">

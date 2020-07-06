@@ -165,7 +165,12 @@ const Header = () => {
             >
               <ul className="socials">
                 <li>
-                  <a href={data.site.siteMetadata.github} aria-label="Github">
+                  <a
+                    href={data.site.siteMetadata.github}
+                    aria-label="Github"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaGithub />
                   </a>
                 </li>
@@ -173,12 +178,19 @@ const Header = () => {
                   <a
                     href={data.site.siteMetadata.linkedin}
                     aria-label="Linkedin"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <FaLinkedinIn />
                   </a>
                 </li>
                 <li>
-                  <a href={data.site.siteMetadata.twitter} aria-label="Twitter">
+                  <a
+                    href={data.site.siteMetadata.twitter}
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaTwitter />
                   </a>
                 </li>
@@ -186,6 +198,8 @@ const Header = () => {
                   <a
                     href={data.site.siteMetadata.instagram}
                     aria-label="Instagram"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <FaInstagram />
                   </a>

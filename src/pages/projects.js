@@ -12,7 +12,9 @@ const Projects = () => {
   const projects = data.allMdx.edges
   return (
     <>
-      <SEO title={`Projects`} />
+      <SEO
+        title={`Projects | Joshua Isaac Freelance Web Developer in Toronto`}
+      />
       <Layout>
         <section className="projects-container">
           <div className="small-wrapper">

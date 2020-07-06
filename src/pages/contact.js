@@ -8,7 +8,9 @@ const Contact = () => {
   const data = useStaticQuery(CONTACT_QUERY)
   return (
     <>
-      <SEO title={`Contact`} />
+      <SEO
+        title={`Contact | Joshua Isaac Freelance Web Developer in Toronto`}
+      />
       <Layout>
         <section className="contact-container">
           <div className="small-wrapper">
