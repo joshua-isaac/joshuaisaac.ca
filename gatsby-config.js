@@ -11,10 +11,10 @@ module.exports = {
     siteUrl: "https://www.joshuaisaac.ca",
     image: "",
     author: "Joshua Isaac",
-    twitter: "https://www.twitter.com",
-    instagram: "https://www.instagram.com",
-    github: "https://www.github.com",
-    linkedin: "https://www.linkedin.com",
+    twitter: "https://twitter.com/joshuaisaaac",
+    instagram: "https://www.instagram.com/joshu.a/",
+    github: "https://github.com/joshua-isaac",
+    linkedin: "https://www.linkedin.com/in/joshua-isaac/",
   },
   plugins: [
     // pages
