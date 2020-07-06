@@ -65,7 +65,7 @@ const Contact = () => {
               </ul>
               <Form
                 name="contact"
-                method="POST"
+                method="post"
                 data-netlify="true"
                 onSubmit="submit"
               >
