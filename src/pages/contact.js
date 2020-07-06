@@ -18,9 +18,8 @@ const Contact = () => {
             <div className="contact-content">
               <p>
                 Would you like to know more about me, what I do or how I can
-                help you? Even if you just want to say hello, or want to
-                reccomend me a good taco joint. Fill out the form below or reach
-                me at any of my socials and ill get back to you within 24 hours!
+                help you? Fill out the form below or reach me at any of my
+                socials and ill get back to you within 24 hours!
               </p>
               <ul>
                 <li>
@@ -50,7 +49,12 @@ const Contact = () => {
                   </a>
                 </li>
               </ul>
-              <Form>
+              <Form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onSubmit="submit"
+              >
                 <Form.Group as={Row}>
                   <Col lg={6} md={6}>
                     <Form.Control
@@ -84,10 +88,11 @@ const Contact = () => {
                     rows="6"
                     name="message"
                     placeholder="Message..."
+                    required
                   />
                 </Form.Group>
                 <div className="btn">
-                  <button>Submit</button>
+                  <button type="submit">Submit</button>
                 </div>
               </Form>
             </div>
