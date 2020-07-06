@@ -13,13 +13,6 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         category
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1024, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
       }
     }
   }

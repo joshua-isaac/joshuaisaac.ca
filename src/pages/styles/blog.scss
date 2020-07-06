@@ -17,21 +17,29 @@
       background-color: $red;
     }
   }
-  .date {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 400;
-  }
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-    h3 {
-      transition: 0.3s ease;
-      font-weight: 600;
-      &:hover {
-        color: $red;
+  .posts-list {
+    article {
+      margin-bottom: 25px;
+      strong {
+        font-weight: 600;
+      }
+      .date {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+        h3 {
+          transition: 0.3s ease;
+          font-weight: 600;
+          &:hover {
+            color: $red;
+          }
+        }
       }
     }
   }
