@@ -56,7 +56,7 @@ const LetsWorkTogether = () => {
           </li>
         </ul>
         <div className="contact-btn">
-          <Link to="/contact">Get Free Quote</Link>
+          <Link to="/contact">Contact Me</Link>
         </div>
       </div>
     </div>
