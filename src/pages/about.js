@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 import { Row, Col } from "react-bootstrap"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import Resume from "../images/resume.pdf"
 import LetsWorkTogether from "../components/LetsWorkTogether/LetsWorkTogether"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
@@ -126,10 +125,14 @@ export const About = () => {
                     I'm always looking for freelance work and would love to
                     bring any projects you may have to life, so feel free to{" "}
                     <Link to="/contact">contact</Link> me, or{" "}
-                    <a href={Resume} download>
+                    <a
+                      href="https://drive.google.com/file/d/1BG9adqckMTnFpQgfs-jbA3NV2ngfCyS-/view?usp=sharing"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       download
                     </a>{" "}
-                    my resume if you wanna hire me, thats cool too. 😃
+                    my resume if you wanna hire me, thats cool too.
                   </p>
                   <p>
                     You can check out some of my work{" "}
@@ -223,7 +226,7 @@ export default About
 
 const ABOUT_QUERY = graphql`
   query {
-    file(relativePath: { eq: "about-img-2.JPG" }) {
+    file(relativePath: { eq: "about-img.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1024, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
