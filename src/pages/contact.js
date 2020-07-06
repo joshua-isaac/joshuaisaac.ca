@@ -23,7 +23,12 @@ const Contact = () => {
               </p>
               <ul>
                 <li>
-                  <a href={data.site.siteMetadata.github} aria-label="Github">
+                  <a
+                    href={data.site.siteMetadata.github}
+                    aria-label="Github"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Github
                   </a>
                 </li>
@@ -31,12 +36,19 @@ const Contact = () => {
                   <a
                     href={data.site.siteMetadata.linkedin}
                     aria-label="Linkedin"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Linkedin
                   </a>
                 </li>
                 <li>
-                  <a href={data.site.siteMetadata.twitter} aria-label="Twitter">
+                  <a
+                    href={data.site.siteMetadata.twitter}
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Twitter
                   </a>
                 </li>
@@ -44,6 +56,8 @@ const Contact = () => {
                   <a
                     href={data.site.siteMetadata.instagram}
                     aria-label="Instagram"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Instagram
                   </a>
@@ -55,6 +69,7 @@ const Contact = () => {
                 data-netlify="true"
                 onSubmit="submit"
               >
+                <input type="hidden" name="form-name" value="contact" />
                 <Form.Group as={Row}>
                   <Col lg={6} md={6}>
                     <Form.Control
