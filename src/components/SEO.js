@@ -20,7 +20,7 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
           "Blog",
         ]
         const metaAuthor = author || data.site.siteMetadata.author
-        const metaUrl = url || data.site.siteMetadata.url
+        const metaUrl = url || data.site.siteMetadata.siteUrl
         const metaImage = image || data.site.siteMetadata.image
         return (
           <Helmet
@@ -98,7 +98,7 @@ const detailsQuery = graphql`
         image
         title
         twitter
-        url
+        siteUrl
       }
     }
   }

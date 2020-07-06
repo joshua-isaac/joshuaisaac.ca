@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Joshua Isaac",
     description: "Freelance Web Developer in Toronto",
-    url: "https://www.joshuaisaac.ca",
+    siteUrl: "https://www.joshuaisaac.ca",
     image: "",
     author: "Joshua Isaac",
     twitter: "https://www.twitter.com",
@@ -95,6 +95,8 @@ module.exports = {
         icon: `src/images/icon2.png`,
       },
     },
-    "gatsby-plugin-offline",
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 }
