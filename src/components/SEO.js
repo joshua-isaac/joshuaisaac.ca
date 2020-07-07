@@ -7,7 +7,6 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        console.log(data)
         const metaDescription =
           description || data.site.siteMetadata.description
         const metaTitle = title || data.site.siteMetadata.title

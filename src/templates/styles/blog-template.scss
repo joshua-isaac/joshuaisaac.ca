@@ -47,4 +47,40 @@
       }
     }
   }
+  .top-back-btn {
+    margin-bottom: 40px;
+    a {
+      color: $black;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      span {
+        margin-right: 10px;
+      }
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  .bottom-back-btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: $black;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      .left-arrow {
+        margin-right: 10px;
+      }
+      .right-arrow {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
 }
