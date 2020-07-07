@@ -17,11 +17,11 @@ const Footer = () => {
             <FaLinkedinIn />
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href={data.site.siteMetadata.twitter} aria-label="Twitter">
             <FaTwitter />
           </a>
-        </li>
+        </li> */}
         <li>
           <a href={data.site.siteMetadata.instagram} aria-label="Instagram">
             <FaInstagram />

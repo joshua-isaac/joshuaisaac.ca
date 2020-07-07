@@ -168,14 +168,7 @@ export const About = () => {
                       <span role="img" aria-label="Travel Emoji">
                         ✈️
                       </span>{" "}
-                      Travelling with my bad ass{" "}
-                      <a
-                        href="https://www.instagram.com/sibelrafailov"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        girlfriend
-                      </a>
+                      Travelling
                     </li>
                   </ul>
                 </div>

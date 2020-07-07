@@ -42,7 +42,7 @@ const Contact = () => {
                     Linkedin
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href={data.site.siteMetadata.twitter}
                     aria-label="Twitter"
@@ -51,7 +51,7 @@ const Contact = () => {
                   >
                     Twitter
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     href={data.site.siteMetadata.instagram}

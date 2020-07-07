@@ -184,7 +184,7 @@ const Header = () => {
                     <FaLinkedinIn />
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href={data.site.siteMetadata.twitter}
                     aria-label="Twitter"
@@ -193,7 +193,7 @@ const Header = () => {
                   >
                     <FaTwitter />
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     href={data.site.siteMetadata.instagram}
