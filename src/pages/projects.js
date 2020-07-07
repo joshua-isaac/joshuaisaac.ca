@@ -67,7 +67,7 @@ const Projects = () => {
             </div>
           </div>
         </section>
-        <Testimonials />
+        {/* <Testimonials /> */}
         <LetsWorkTogether />
       </Layout>
     </>

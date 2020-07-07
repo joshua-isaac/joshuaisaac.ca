@@ -7,7 +7,6 @@ import BackgroundImage from "gatsby-background-image"
 const Hero = () => {
   const data = useStaticQuery(HERO_IMG_QUERY)
   const HeroImg = data.file.childImageSharp.fluid
-  console.log(HeroImg)
   return (
     <BackgroundImage fluid={HeroImg} className={`hero`}>
       <div className="overlay">
