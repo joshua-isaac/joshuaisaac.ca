@@ -9,7 +9,7 @@ module.exports = {
     title: "Joshua Isaac",
     description: "Freelance Web Developer in Toronto",
     siteUrl: "https://www.joshuaisaac.ca",
-    image: "",
+    image: "src/images/site-img.png",
     author: "Joshua Isaac",
     twitter: "https://twitter.com/joshuaisaaac",
     instagram: "https://www.instagram.com/joshu.a/",
@@ -17,6 +17,15 @@ module.exports = {
     linkedin: "https://www.linkedin.com/in/joshua-isaac/",
   },
   plugins: [
+    // google analytics
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-171781633-1",
+        head: false,
+        anonymize: true,
+      },
+    },
     // pages
     {
       resolve: `gatsby-source-filesystem`,
