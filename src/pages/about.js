@@ -122,6 +122,11 @@ export const About = () => {
         <meta property="og:image" content="" />
         <meta property="og:local" content="en_US" />
         <meta property="og:url" content={siteUrl} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:creator" content={author} />
+        <meta property="twitter:title" content={`About | ${title}`} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="" />
         <link rel="canonical" href={siteUrl} />
       </Helmet>
       <Layout>
