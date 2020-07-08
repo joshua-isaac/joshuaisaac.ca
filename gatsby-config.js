@@ -6,8 +6,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Joshua Isaac",
-    description: "Freelance Web Developer in Toronto",
+    title: "Freelance Web Design & Development Based in Toronto",
+    description:
+      "Custom WordPress and Shopify Web Design and Development for business and brand owners. Freelancer, Based in Toronto, Canada.",
+    keywords:
+      "Web Design, Web Development, Freelance, WordPress, Shopify, Blog",
     siteUrl: "https://www.joshuaisaac.ca",
     image: "src/images/site-img.png",
     author: "Joshua Isaac",

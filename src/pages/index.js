@@ -1,15 +1,51 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero/Hero"
-import SEO from "../components/SEO"
+import { Helmet } from "react-helmet"
 
 export default function Home() {
+  const data = useStaticQuery(HOME_QUERY)
+  const {
+    author,
+    description,
+    image,
+    keywords,
+    siteUrl,
+    title,
+  } = data.site.siteMetadata
   return (
     <>
-      <SEO title={`Joshua Isaac | Freelance Web Developer in Toronto`} />
+      <Helmet>
+        <title>{`Joshua Isaac | ${title}`}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" conetnt={keywords} />
+        <meta property="og:title" content={`Joshua Isaac | ${title}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="" />
+        <meta property="og:local" content="en_US" />
+        <meta property="og:url" content={siteUrl} />
+        <link rel="canonical" href={siteUrl} />
+      </Helmet>
       <Layout>
         <Hero />
       </Layout>
     </>
   )
 }
+
+const HOME_QUERY = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        title
+        siteUrl
+        image
+        keywords
+        author
+      }
+    }
+  }
+`

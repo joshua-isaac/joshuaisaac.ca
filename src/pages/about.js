@@ -7,7 +7,7 @@ import LetsWorkTogether from "../components/LetsWorkTogether/LetsWorkTogether"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import SEO from "../components/SEO"
+import { Helmet } from "react-helmet"
 
 import HTML from "../images/HTML.svg"
 import SCSS from "../images/SCSS.svg"
@@ -90,6 +90,14 @@ const tools = [
 
 export const About = () => {
   const data = useStaticQuery(ABOUT_QUERY)
+  const {
+    author,
+    description,
+    image,
+    keywords,
+    siteUrl,
+    title,
+  } = data.site.siteMetadata
   const AboutImg = data.file.childImageSharp.fluid
   var settings = {
     speed: 2000,
@@ -104,7 +112,18 @@ export const About = () => {
   }
   return (
     <>
-      <SEO title={`About | Joshua Isaac Freelance Web Developer in Toronto`} />
+      <Helmet>
+        <title>{`About | ${title}`}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" conetnt={keywords} />
+        <meta property="og:title" content={`About | ${title}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="" />
+        <meta property="og:local" content="en_US" />
+        <meta property="og:url" content={siteUrl} />
+        <link rel="canonical" href={siteUrl} />
+      </Helmet>
       <Layout>
         <section className="about-container">
           <div className="small-wrapper">
@@ -224,6 +243,20 @@ const ABOUT_QUERY = graphql`
         fluid(maxWidth: 1024, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+    site {
+      siteMetadata {
+        github
+        instagram
+        linkedin
+        twitter
+        description
+        title
+        siteUrl
+        image
+        keywords
+        author
       }
     }
   }

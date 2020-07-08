@@ -5,16 +5,33 @@ import { Row, Col } from "react-bootstrap"
 import Img from "gatsby-image"
 import LetsWorkTogether from "../components/LetsWorkTogether/LetsWorkTogether"
 import Testimonials from "../components/Testimonials/Testimonials"
-import SEO from "../components/SEO"
+import { Helmet } from "react-helmet"
 
 const Projects = () => {
   const data = useStaticQuery(PROJECTS_QUERY)
   const projects = data.allMdx.edges
+  const {
+    author,
+    description,
+    image,
+    keywords,
+    siteUrl,
+    title,
+  } = data.site.siteMetadata
   return (
     <>
-      <SEO
-        title={`Projects | Joshua Isaac Freelance Web Developer in Toronto`}
-      />
+      <Helmet>
+        <title>{`Projects | ${title}`}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" conetnt={keywords} />
+        <meta property="og:title" content={`Projects | ${title}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="" />
+        <meta property="og:local" content="en_US" />
+        <meta property="og:url" content={siteUrl} />
+        <link rel="canonical" href={siteUrl} />
+      </Helmet>
       <Layout>
         <section className="projects-container">
           <div className="small-wrapper">
@@ -95,6 +112,16 @@ const PROJECTS_QUERY = graphql`
             }
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        description
+        title
+        siteUrl
+        image
+        keywords
+        author
       }
     }
   }

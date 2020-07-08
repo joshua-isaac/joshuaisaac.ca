@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import SEO from "../components/SEO"
+import { Helmet } from "react-helmet"
 import LetsWorkTogether from "../components/LetsWorkTogether/LetsWorkTogether"
 
 export const query = graphql`
@@ -16,14 +16,50 @@ export const query = graphql`
         category
       }
     }
+    site {
+      siteMetadata {
+        github
+        instagram
+        linkedin
+        twitter
+        description
+        title
+        siteUrl
+        image
+        keywords
+        author
+      }
+    }
   }
 `
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   console.log(pageContext)
+  const {
+    author,
+    description,
+    image,
+    keywords,
+    siteUrl,
+    title,
+  } = data.site.siteMetadata
   return (
     <>
-      <SEO title={data.mdx.frontmatter.title} description={`yto`} />
+      <Helmet>
+        <title>{`${data.mdx.frontmatter.title} | ${title}`}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" conetnt={keywords} />
+        <meta
+          property="og:title"
+          content={`${data.mdx.frontmatter.title} | ${title}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="" />
+        <meta property="og:local" content="en_US" />
+        <meta property="og:url" content={siteUrl} />
+        <link rel="canonical" href={siteUrl} />
+      </Helmet>
       <Layout>
         <section className="single-blog-container">
           <div className="small-wrapper">

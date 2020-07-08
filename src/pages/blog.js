@@ -1,15 +1,33 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import SEO from "../components/SEO"
+import { Helmet } from "react-helmet"
 
 const Blog = () => {
   const data = useStaticQuery(BLOG_QUERY)
-  console.log(data)
   const posts = data.allMdx.edges
+  const {
+    author,
+    description,
+    image,
+    keywords,
+    siteUrl,
+    title,
+  } = data.site.siteMetadata
   return (
     <>
-      <SEO title={`Blog | Joshua Isaac Freelance Web Developer in Toronto`} />
+      <Helmet>
+        <title>{`Blog | ${title}`}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" conetnt={keywords} />
+        <meta property="og:title" content={`Blog | ${title}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="" />
+        <meta property="og:local" content="en_US" />
+        <meta property="og:url" content={siteUrl} />
+        <link rel="canonical" href={siteUrl} />
+      </Helmet>
       <Layout>
         <section className="blogs-container">
           <div className="small-wrapper">
@@ -58,6 +76,16 @@ const BLOG_QUERY = graphql`
           }
           body
         }
+      }
+    }
+    site {
+      siteMetadata {
+        description
+        title
+        siteUrl
+        image
+        keywords
+        author
       }
     }
   }
