@@ -32,6 +32,7 @@ const Contact = () => {
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content="" />
         <link rel="canonical" href={siteUrl} />
+        <html lang="en" />
       </Helmet>
       <Layout>
         <section className="contact-container">
