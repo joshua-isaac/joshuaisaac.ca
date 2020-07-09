@@ -1,6 +1,9 @@
 .hero {
   height: 850px;
   position: relative;
+  @media (min-height: 1000px) {
+    height: 100vh;
+  }
   @media (max-width: 575px) {
     height: 90vh;
   }
