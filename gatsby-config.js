@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Freelance Web Design & Development Based in Toronto",
+    title: "Frontend Web Developer",
     description:
       "Custom WordPress and Shopify Web Design and Development for business and brand owners. Freelancer, Based in Toronto, Canada.",
     keywords:
