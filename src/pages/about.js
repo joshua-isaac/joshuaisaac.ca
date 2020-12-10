@@ -20,7 +20,6 @@ import REACT from "../images/REACT.svg"
 import GATSBY from "../images/GATSBY.svg"
 import GRAPHQL from "../images/GRAPHQL.svg"
 import NETLIFY from "../images/NETLIFY.svg"
-import ADOBE from "../images/ADOBE.svg"
 import TERMINAL from "../images/TERMINAL.svg"
 import FIGMA from "../images/FIGMA.svg"
 import VSCODE from "../images/VSCODE.svg"
@@ -73,10 +72,6 @@ const tools = [
   {
     name: "Terminal",
     src: TERMINAL,
-  },
-  {
-    name: "Adobe",
-    src: ADOBE,
   },
   {
     name: "Figma",
