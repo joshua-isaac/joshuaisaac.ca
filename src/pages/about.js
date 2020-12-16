@@ -133,8 +133,16 @@ export const About = () => {
               <Col lg={6}>
                 <div className="about-content">
                   <p>
-                    Hey there I'm Joshua, a frontend web developer experienced
-                    in creating bespoke WordPress & Shopify themes.
+                    Hey there I'm Joshua, a Front-End Web Developer currently
+                    working over at{" "}
+                    <a
+                      href="https://agilitycms.com/"
+                      target="blank"
+                      rel="noopener no-referer"
+                    >
+                      Agility CMS
+                    </a>
+                    .
                   </p>
                   <p>
                     Lately I've been extremely interested in the{" "}
