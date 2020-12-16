@@ -145,14 +145,14 @@ export const About = () => {
                     >
                       JAMstack
                     </a>
-                    , and delivering better performance with modern web
-                    technologies and architecture.
+                    , and delivering high performance websites by using modern
+                    web technologies and architecture.
                   </p>
                   <p>
                     Still using monolithic solution for your website like
                     WordPress? I would love to help your business transition to
-                    the JAMstack for a website that is faster, more secure,
-                    scalable, SEO-friendly and cheaper-to-host!
+                    the JAMstack for a modern website that is faster, more
+                    secure, scalable, SEO-friendly and cheaper to host!
                   </p>
                   <p>
                     Feel free to <Link to="/contact">contact</Link> me, or{" "}
