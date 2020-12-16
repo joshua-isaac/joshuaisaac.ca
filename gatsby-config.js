@@ -6,11 +6,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Frontend Web Developer",
+    title: "Front-end Web Developer",
     description:
-      "Custom WordPress and Shopify Web Design and Development for business and brand owners. Freelancer, Based in Toronto, Canada.",
+      "Front-end Web Developer delivering better performance with modern web technologies and architecture. Freelancer, Based in Toronto, Canada.",
     keywords:
-      "Web Design, Web Development, Freelance, WordPress, Shopify, Blog",
+      "Web Design, Web Development, JAMstack, Freelance, WordPress, Shopify, Blog",
     siteUrl: "https://www.joshuaisaac.ca",
     image: "src/images/site-img.png",
     author: "Joshua Isaac",

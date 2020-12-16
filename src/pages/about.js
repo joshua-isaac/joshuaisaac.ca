@@ -134,17 +134,28 @@ export const About = () => {
                 <div className="about-content">
                   <p>
                     Hey there I'm Joshua, a frontend web developer experienced
-                    in creating bespoke WordPress & Shopify themes. With my
-                    extensive knowledge of HTML5, CSS3, SCSS, JavaScript,
-                    jQuery, PHP and my growing interest in modern tools and
-                    frameworks such as React & Gatsby, I’m passionate about
-                    building fast, modern and responsive websites with
-                    remarkable user experience.
+                    in creating bespoke WordPress & Shopify themes.
                   </p>
                   <p>
-                    I'm always looking for freelance work and would love to
-                    bring any projects you may have to life, so feel free to{" "}
-                    <Link to="/contact">contact</Link> me, or{" "}
+                    Lately I've been extremely interested in the{" "}
+                    <a
+                      href="https://jamstack.org/"
+                      target="blank"
+                      rel="noopener no-referer"
+                    >
+                      JAMstack
+                    </a>
+                    , and delivering better performance with modern web
+                    technologies and architecture.
+                  </p>
+                  <p>
+                    Still using monolithic solution for your website like
+                    WordPress? I would love to help your business transition to
+                    the JAMstack for a website that is faster, more secure,
+                    scalable, SEO-friendly and cheaper-to-host!
+                  </p>
+                  <p>
+                    Feel free to <Link to="/contact">contact</Link> me, or{" "}
                     <a
                       href="https://drive.google.com/file/d/1BG9adqckMTnFpQgfs-jbA3NV2ngfCyS-/view?usp=sharing"
                       target="_blank"
@@ -154,6 +165,7 @@ export const About = () => {
                     </a>{" "}
                     my resume if you wanna hire me, thats cool too.
                   </p>
+
                   <p>
                     You can check out some of my work{" "}
                     <Link to="/projects">here</Link>.
